@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## install lucide icon  
+https://lucide.dev/  
+npm install lucide-react  
+
+## install pg driver  
+npm install pg  
+npm i --save-dev @types/pg  
+
+## install zod
+npm i zod  
+https://www.npmjs.com/package/zod  
+
+## install bcrypt  
+npm i bcrypt  
+npm i @types/bcrypt  
+https://www.npmjs.com/package/bcrypt  
+
+## install uuid  
+npm install uuid  
+npm i --save-dev @types/uuid  
