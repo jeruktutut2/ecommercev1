@@ -14,7 +14,6 @@ export default function RegisterPage() {
     }
     return (
         <div>
-            {/* {result} */}
             <span onClick={cekmantap}>mantap</span>
             <br />
             <button formAction={formAction} disabled={pending}>

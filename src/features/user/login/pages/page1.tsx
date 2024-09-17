@@ -9,12 +9,11 @@ import { EmailComponents } from "../components/EmailComponent";
 import { PasswordComponent } from '../components/PasswordComponent';
 import { LoginWithComponent } from '../components/LoginWithComponent';
 import { HeaderComponent } from '../components/HeaderComponent';
-import { SubmitComponent } from '../components/SubmitComponent';
 
 export function LoginPage() {
-    const [showPassword, setShowPassword] = useState(false)
+    let showPassword: boolean = false
     const toggleShowPassword = () => {
-        setShowPassword(!showPassword)
+        showPassword = !showPassword
     }
     let emailErrorMessages: string = ""
     let passwordErrorMessages: string = ""
@@ -46,9 +45,12 @@ export function LoginPage() {
                     <EmailComponents initialEmailErrorMessages={emailErrorMessages} pending={pending} />
                 </div>
                 <div className="mb-3">
-                    <PasswordComponent showPassword={showPassword} initialPasswordErrorMessages={passwordErrorMessages} pending={pending} toggleShowPassword={toggleShowPassword}/>
+                    <PasswordComponent passwordErrorMessages={passwordErrorMessages} pending={pending}/>
                 </div>
-                <SubmitComponent pending={pending} action={action}/>
+                <button formAction={action} disabled={pending} className="w-full bg-blue-500 text-white text-sm rounded-sm shadow-sm py-2 px-4
+                    hover:bg-blue-600
+                    focus:outline-none focus:bg-blue-600
+                    disabled:bg-blue-700">Login</button>
                 <LoginWithComponent />
                 <div className="mt-3">
                     <p className="text-center text-xs text-gray-500">Don&apos;t have an account? <span className="text-blue-500 hover:underline hover:cursor-pointer">Register</span></p>
